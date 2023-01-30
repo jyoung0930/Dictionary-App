@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+
+.logo img {
+  height: 35px;
+  width: 35px;
+}
+
+.dropdown_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 183px;
+  height: 152px;
+  background-color: #1f1f1f;
+  border-radius: 16px;
+  box-shadow: 0px 5px 30px #a445ed;
+  color: #ffffff;
+}
