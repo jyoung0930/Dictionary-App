@@ -2,9 +2,8 @@ import Header from "./Header";
 
 export default function App() {
   return (
-    <div>
+    <div id="main_container">
       <Header />
-      <h1> oyy mate!</h1>
     </div>
   );
 }
