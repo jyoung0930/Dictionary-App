@@ -1,6 +1,7 @@
 import logo from "../assets/images/logo.svg";
 import arrow from "../assets/images/icon-arrow-down.svg";
-import moon from "../assets/images/icon-moon.svg";
+import moonLight from "../assets/images/icon-moon-light.svg";
+import moonDark from "../assets/images/icon-moon-dark.svg";
 
 export default function Header() {
   return (
@@ -11,13 +12,15 @@ export default function Header() {
 
       <div className="font_theme_section">
         <span className="font_selection">Sans Serif</span>
-        <img src={arrow} />
+        <div className="arrow">
+          <img src={arrow} />
+        </div>
         <div className="rectangle_shape"></div>
         <div className="toggle">
           <div className="notch"></div>
         </div>
         <div className="moon">
-          <img src={moon} />
+          <img src={moonDark} />
         </div>
         <ul className="dropdown_menu">
           <li className="san_serif">Sans Serif</li>

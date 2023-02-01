@@ -14,14 +14,21 @@
 
 /* Header Section */
 
-.logo img {
-  height: 35px;
-  width: 35px;
-}
-
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 35px;
+  width: 35px;
 }
 
 .dropdown_menu {
@@ -35,6 +42,9 @@ header {
   box-shadow: 0px 5px 30px #a445ed;
   color: #ffffff;
   list-style: none;
+  position: absolute;
+  top: 7%;
+  right: 18%;
   display: none;
 }
 
@@ -47,6 +57,10 @@ header {
 
 .dropdown_menu li:hover {
   color: #a445ed;
+}
+
+.font_selection {
+  cursor: pointer;
 }
 
 .san_serif {
@@ -75,7 +89,7 @@ header {
   display: flex;
   align-items: center;
   padding: 3px;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 .notch {
@@ -86,12 +100,9 @@ header {
   cursor: pointer;
 }
 
-.moon img {
-  color: #a445ed;
-}
-
 .font_theme_section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 200px;
 }
