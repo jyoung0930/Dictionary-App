@@ -114,30 +114,33 @@ header {
 /* Form Section */
 
 form {
-  border: 5px solid blue;
-  margin: 50px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
-  background-color: #1f1f1f;
-  border-radius: 16px;
-  padding: 0 20px;
+  position: relative;
 }
 
 input {
   color: #e9e9e9;
-  width: 50%;
-  border: none;
+  width: 100%;
+  margin: 50px auto;
+  height: 64px;
+  border-radius: 16px;
   font-weight: 700;
   font-size: 20px;
-}
-
-input:focus {
+  background-color: #1f1f1f;
+  padding: 0 20px;
+  height: 64px;
   outline: none;
 }
 
-form input,
-form {
-  background-color: #1f1f1f;
+form img {
+  position: absolute;
+  top: 45%;
+  right: 5%;
+}
+
+.error {
+  border: 3px solid red;
+}
+
+input:focus {
+  border: 3px solid #a445ed;
 }
