@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+body {
+  color: white;
+  background-color: #2d2d2d;
+}
+
 /*  Main Container */
 
 #main_container {
@@ -143,4 +148,25 @@ form img {
 
 input:focus {
   border: 3px solid #a445ed;
+}
+
+/* Results Section */
+
+.results_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results_word_phonetic {
+  display: flex;
+  flex-direction: column;
+}
+
+.results_word {
+  font-size: 64px;
+}
+
+.results_phonetic {
+  font-size: 24px;
 }

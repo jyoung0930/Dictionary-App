@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
 import Form from "./Form";
-
+import Results from "./Results";
 export default function App() {
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState("dictionary");
@@ -30,6 +30,7 @@ export default function App() {
         empty={empty}
         setIsEmpty={setIsEmpty}
       />
+      <Results />
     </div>
   );
 }
