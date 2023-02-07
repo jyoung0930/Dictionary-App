@@ -10,15 +10,24 @@ export default function App() {
   const [empty, setIsEmpty] = useState(false);
 
   useEffect(() => {
-    // fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
-    //   .then((res) => (res.ok ? res.json() : console.log("error")))
-    //   .then((data) =>
-    //     data === undefined ? setError((prev) => !prev) : setData(data[0])
-    //   );
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
+      .then((res) => (res.ok ? res.json() : console.log("error")))
+      .then((data) =>
+        data === undefined ? setError((prev) => !prev) : setData(data[0])
+      );
   }, [submitted]);
 
   console.log(data);
   console.log(error);
+
+  function audioData() {
+    const files = data.phonetics;
+    const sound = [];
+    for (let i = 0; i < files.length; i++) {
+      files[i].audio !== "" && sound.push(files[i].audio);
+    }
+    return sound[0];
+  }
 
   return (
     <div id="main_container">
@@ -30,7 +39,7 @@ export default function App() {
         empty={empty}
         setIsEmpty={setIsEmpty}
       />
-      <Results />
+      <Results audio={audioData} data={data} />
     </div>
   );
 }
