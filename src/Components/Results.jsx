@@ -15,6 +15,12 @@ export default function Results({ data, audio }) {
         </div>
         <img onClick={handleAudio} src={playIcon} alt="play icon" />
       </div>
+      <div className="noun_section">
+        <div className="word_type">
+          <p>Noun</p>
+          <div className="word_type_line"></div>
+        </div>
+      </div>
     </div>
   );
 }

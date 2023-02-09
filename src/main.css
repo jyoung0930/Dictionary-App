@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,7 @@
 
 body {
   color: white;
-  background-color: #2d2d2d;
+  background-color: black;
 }
 
 /*  Main Container */
@@ -165,8 +164,27 @@ input:focus {
 
 .results_word {
   font-size: 64px;
+  margin-bottom: 11px;
+  font-weight: 700;
 }
 
 .results_phonetic {
   font-size: 24px;
+  color: #a445ed;
+  font-weight: 700;
+}
+
+.word_type {
+  display: flex;
+  align-items: center;
+}
+.word_type p {
+  margin-right: 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.word_type_line {
+  width: 100%;
+  border-top: 2px solid #3a3a3a;
 }
