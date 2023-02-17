@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -133,6 +133,7 @@ input {
   padding: 0 20px;
   height: 64px;
   outline: none;
+  border: none;
 }
 
 form img {
@@ -177,14 +178,41 @@ input:focus {
 .word_type {
   display: flex;
   align-items: center;
+  margin: 38px 0;
 }
 .word_type p {
   margin-right: 30px;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .word_type_line {
   width: 100%;
   border-top: 2px solid #3a3a3a;
+}
+
+.word_type_heading {
+  color: #757575;
+  font-size: 20px;
+  font-family: "Lora", serif;
+  margin-bottom: 24px;
+}
+
+.noun_meaning_list {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  margin-left: 50px;
+  list-style: none;
+}
+.noun_meaning_list li {
+  margin-bottom: 13px;
+}
+
+.noun_meaning_list li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #a445ed; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }

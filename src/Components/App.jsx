@@ -10,15 +10,17 @@ export default function App() {
   const [empty, setIsEmpty] = useState(false);
 
   useEffect(() => {
-    // fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
-    //   .then((res) => (res.ok ? res.json() : console.log("error")))
-    //   .then((data) =>
-    //     data === undefined ? setError((prev) => !prev) : setData(data[0])
-    //   );
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
+      .then((res) => (res.ok ? res.json() : console.log("error")))
+      .then((data) =>
+        data === undefined ? setError((prev) => !prev) : setData(data[0])
+      );
   }, [submitted]);
 
   console.log(data);
   console.log(error);
+  console.log(data);
+  console.log(inputValue);
 
   function audioData() {
     const files = data.phonetics;
