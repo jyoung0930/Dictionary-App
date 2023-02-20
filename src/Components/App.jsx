@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import Form from "./Form";
 import Results from "./Results";
+import deFaultdata from "../data/data";
 export default function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(deFaultdata);
   const [inputValue, setInputValue] = useState("dictionary");
   const [error, setError] = useState(false);
   const [submitted, setSubmitted] = useState(false);
