@@ -216,3 +216,29 @@ input:focus {
   width: 1em;
   margin-left: -1em;
 }
+
+.synonym_section {
+  display: flex;
+  margin-top: 40px;
+}
+
+.synonym_text {
+  color: #a445ed;
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.word_meaning {
+  font-weight: 400;
+  font-size: 18px;
+  color: #757575;
+  font-family: "Inter";
+  margin-left: 50px;
+}
+
+.footer_line {
+  width: 100%;
+  border-top: 2px solid #3a3a3a;
+  margin: 30px 0;
+}

@@ -1,49 +1,42 @@
 const deFaultdata = {
-  word: "dictionary",
+  word: "keyboard",
   meanings: [
     {
       definitions: [
         {
           definition:
-            "A reference work with a list of words from one or …onunciation, usage, translations, and other data.",
+            "(etc.) A set of keys used to operate a typewriter, computer etc.",
         },
         {
           definition:
-            "(preceded by the) A synchronic dictionary of a sta…ain words that are properly part of the language.",
+            "A component of many instruments including the pian…cause different tones to be produced when struck.",
         },
         {
           definition:
-            "(by extension) Any work that has a list of materia…biographical dictionary, encyclopedic dictionary.",
-        },
-        {
-          definition:
-            "An associative array, a data structure where each …o words and definitions in a physical dictionary.",
+            "A device with keys of a musical keyboard, used to … built into or separate from the keyboard device.",
         },
       ],
-      synonyms: ["wordbook"],
+      synonyms: ["electronic keyboard"],
     },
     {
       definitions: [
-        { definition: "To look up in a dictionary." },
-        { definition: "To add to a dictionary." },
-        { definition: "To compile a dictionary." },
+        {
+          definition: "To type on a computer keyboard.",
+          example: "Keyboarding is the part of this job I hate the most.",
+        },
       ],
     },
   ],
   phonetics: [
-    { text: "/ˈdɪkʃəˌnɛɹi/", audio: "" },
-
     {
-      text: "/ˈdɪkʃ(ə)n(ə)ɹi/",
+      text: "/ˈkibɔɹd/",
       audio:
-        "https://api.dictionaryapi.dev/media/pronunciations/en/dictionary-uk.mp3",
-      sourceUrl: "https://commons.wikimedia.org/w/index.php?curid=503422",
+        "https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3",
+      sourceUrl: "https://commons.wikimedia.org/w/index.php?curid=1755168",
     },
-
-    { text: "/ˈdɪkʃəˌnɛɹi/", audio: "" },
   ],
-  phonetic: "/ˈdɪkʃəˌnɛɹi/",
-  sourceUrls: ["https://en.wiktionary.org/wiki/dictionary"],
+  phonetic: "/ˈkiːbɔːd/",
+  sourceUrls: ["https://en.wiktionary.org/wiki/keyboard"],
 };
 
 export default deFaultdata;

@@ -5,17 +5,17 @@ import Results from "./Results";
 import deFaultdata from "../data/data";
 export default function App() {
   const [data, setData] = useState(deFaultdata);
-  const [inputValue, setInputValue] = useState("dictionary");
+  const [inputValue, setInputValue] = useState("keyboard");
   const [error, setError] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [empty, setIsEmpty] = useState(false);
 
   useEffect(() => {
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
-      .then((res) => (res.ok ? res.json() : console.log("error")))
-      .then((data) =>
-        data === undefined ? setError((prev) => !prev) : setData(data[0])
-      );
+    // fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
+    //   .then((res) => (res.ok ? res.json() : console.log("error")))
+    //   .then((data) =>
+    //     data === undefined ? setError((prev) => !prev) : setData(data[0])
+    //   );
   }, [submitted]);
 
   console.log(data);
