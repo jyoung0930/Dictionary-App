@@ -146,6 +146,12 @@ form img {
   border: 3px solid red;
 }
 
+.error_message {
+  position: absolute;
+  top: 30%;
+  color: red;
+}
+
 input:focus {
   border: 3px solid #a445ed;
 }
@@ -175,6 +181,10 @@ input:focus {
   font-weight: 700;
 }
 
+.play_icon:hover {
+  cursor: pointer;
+}
+
 .word_type {
   display: flex;
   align-items: center;
@@ -194,7 +204,7 @@ input:focus {
 .word_type_heading {
   color: #757575;
   font-size: 20px;
-  font-family: "Lora", serif;
+  font-family: "Inconsolata", serif;
   margin-bottom: 24px;
 }
 
@@ -237,8 +247,30 @@ input:focus {
   margin-left: 50px;
 }
 
+/* Source Section */
 .footer_line {
   width: 100%;
   border-top: 2px solid #3a3a3a;
   margin: 30px 0;
+}
+
+.source_section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.source_section .source_url {
+  margin-left: 20px;
+}
+
+.source_section h2 {
+  margin: 0px;
+  font-size: 14px;
+}
+
+.source_section a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
 }
