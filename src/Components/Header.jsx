@@ -12,7 +12,7 @@ export default function Header({
   setFontSelectionText,
 }) {
   function handleDropdown() {
-    setDropDown(true);
+    setDropDown((prev) => !prev);
   }
 
   function handleFontSelection(e) {

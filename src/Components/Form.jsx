@@ -17,7 +17,6 @@ export default function Form({
     display: empty ? "block" : "none",
   };
 
-  console.log(empty);
   return (
     <>
       <form onSubmit={handleSubmit}>
