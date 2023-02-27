@@ -26,6 +26,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border: 5px solid blue;
+  position: relative;
 }
 
 .logo {
@@ -40,8 +41,7 @@ header {
 }
 
 .dropdown_menu {
-  /* display: flex; */
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 183px;
@@ -52,8 +52,9 @@ header {
   color: #ffffff;
   list-style: none;
   position: absolute;
-  top: 7%;
-  right: 18%;
+  top: 100%;
+  right: 11%;
+  z-index: 70;
 }
 
 .dropdown_menu li {
@@ -113,6 +114,10 @@ header {
   justify-content: space-evenly;
   align-items: center;
   width: 200px;
+}
+
+.arrow {
+  cursor: pointer;
 }
 
 /* Form Section */

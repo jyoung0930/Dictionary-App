@@ -9,6 +9,9 @@ export default function App() {
   const [error, setError] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [empty, setIsEmpty] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
+  const [fontSelectionText, setFontSelectionText] = useState("Sans Serif");
+  const [fontSelection, setFontSelection] = useState("sans-serif");
 
   useEffect(() => {
     // fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
@@ -18,10 +21,11 @@ export default function App() {
     //   );
   }, [submitted]);
 
-  console.log(data);
-  console.log(error);
-  console.log(data);
-  console.log(inputValue);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setDropDown(false);
+    });
+  });
 
   function audioData() {
     const files = data.phonetics;
@@ -32,9 +36,24 @@ export default function App() {
     return sound[0];
   }
 
+  const styles = {
+    fontFamily: fontSelection,
+  };
+
+  function closeDropDown() {
+    setDropDown(false);
+  }
+
   return (
-    <div id="main_container">
-      <Header />
+    <div onScroll={closeDropDown} id="main_container" style={styles}>
+      <Header
+        dropDown={dropDown}
+        setDropDown={setDropDown}
+        fontSelection={fontSelection}
+        setFontSelection={setFontSelection}
+        fontSelectionText={fontSelectionText}
+        setFontSelectionText={setFontSelectionText}
+      />
       <Form
         setInputValue={setInputValue}
         value={inputValue}
