@@ -10,6 +10,8 @@ export default function Header({
   setFontSelection,
   fontSelectionText,
   setFontSelectionText,
+  setDarkMode,
+  darkMode,
 }) {
   function handleDropdown() {
     setDropDown((prev) => !prev);
@@ -33,6 +35,14 @@ export default function Header({
     }
   }
 
+  const lightStyle = {
+    justifyContent: darkMode ? "flex-end" : "flex-start",
+  };
+
+  function handleDarkMode() {
+    setDarkMode((prev) => !prev);
+  }
+
   return (
     <header>
       <div className="logo">
@@ -45,7 +55,7 @@ export default function Header({
           <img src={arrow} />
         </div>
         <div className="rectangle_shape"></div>
-        <div className="toggle">
+        <div onClick={handleDarkMode} style={lightStyle} className="toggle">
           <div className="notch"></div>
         </div>
         <div className="moon">

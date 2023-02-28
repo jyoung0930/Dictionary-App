@@ -7,7 +7,6 @@
 
 body {
   color: white;
-  background-color: black;
 }
 
 /*  Main Container */
@@ -99,6 +98,7 @@ header {
   align-items: center;
   padding: 3px;
   justify-content: flex-end;
+  cursor: pointer;
 }
 
 .notch {
@@ -106,7 +106,6 @@ header {
   height: 14px;
   background: #ffffff;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .font_theme_section {
@@ -278,4 +277,21 @@ input:focus {
   text-decoration: none;
   color: inherit;
   font-size: 14px;
+}
+
+/* Error Section */
+
+.error_section {
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+}
+
+.error_section_sub_heading {
+  text-align: center;
+  color: #757575;
+  line-height: 24px;
 }

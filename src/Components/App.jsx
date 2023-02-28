@@ -13,18 +13,19 @@ export default function App() {
   const [dropDown, setDropDown] = useState(false);
   const [fontSelectionText, setFontSelectionText] = useState("Sans Serif");
   const [fontSelection, setFontSelection] = useState("sans-serif");
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
-      .then((res) => (res.ok ? res.json() : console.log("error")))
-      .then((data) => {
-        if (data === undefined) {
-          setError(true);
-        } else if (data !== undefined) {
-          setData(data[0]);
-          setError(false);
-        }
-      });
+    // fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
+    //   .then((res) => (res.ok ? res.json() : console.log("error")))
+    //   .then((data) => {
+    //     if (data === undefined) {
+    //       setError(true);
+    //     } else if (data !== undefined) {
+    //       setData(data[0]);
+    //       setError(false);
+    //     }
+    //   });
   }, [submitted]);
 
   useEffect(() => {
@@ -45,6 +46,10 @@ export default function App() {
   const styles = {
     fontFamily: fontSelection,
   };
+  // Set dark background on root when dark mode is true
+  document.getElementById("root").style.backgroundColor = darkMode
+    ? "black"
+    : "white";
 
   function closeDropDown() {
     setDropDown(false);
@@ -59,6 +64,8 @@ export default function App() {
         setFontSelection={setFontSelection}
         fontSelectionText={fontSelectionText}
         setFontSelectionText={setFontSelectionText}
+        setDarkMode={setDarkMode}
+        darkMode={darkMode}
       />
       <Form
         setInputValue={setInputValue}
@@ -66,6 +73,7 @@ export default function App() {
         setSubmitted={setSubmitted}
         empty={empty}
         setIsEmpty={setIsEmpty}
+        darkMode={darkMode}
       />
       {!error && <Results audio={audioData} data={data} />}
       {error && <Error />}
