@@ -3,6 +3,7 @@ import Header from "./Header";
 import Form from "./Form";
 import Results from "./Results";
 import deFaultdata from "../data/data";
+import Error from "./Error";
 export default function App() {
   const [data, setData] = useState(deFaultdata);
   const [inputValue, setInputValue] = useState("keyboard");
@@ -14,16 +15,16 @@ export default function App() {
   const [fontSelection, setFontSelection] = useState("sans-serif");
 
   useEffect(() => {
-    // fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
-    //   .then((res) => (res.ok ? res.json() : console.log("error")))
-    //   .then((data) => {
-    //     if (data === undefined) {
-    //       setError(true);
-    //     } else if (data !== undefined) {
-    //       setData(data[0]);
-    //       setError(false);
-    //     }
-    //   });
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
+      .then((res) => (res.ok ? res.json() : console.log("error")))
+      .then((data) => {
+        if (data === undefined) {
+          setError(true);
+        } else if (data !== undefined) {
+          setData(data[0]);
+          setError(false);
+        }
+      });
   }, [submitted]);
 
   useEffect(() => {
@@ -67,6 +68,7 @@ export default function App() {
         setIsEmpty={setIsEmpty}
       />
       {!error && <Results audio={audioData} data={data} />}
+      {error && <Error />}
     </div>
   );
 }

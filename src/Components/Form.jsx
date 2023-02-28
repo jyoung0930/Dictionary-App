@@ -29,10 +29,10 @@ export default function Form({
           maxLength="30"
         />
         <img src={searchIcon} alt="icon" />
+        <p style={errorStyle} className="error_message">
+          Whoops, can’t be empty…
+        </p>
       </form>
-      <p style={errorStyle} className="error_message">
-        Whoops, can’t be empty…
-      </p>
     </>
   );
 }
