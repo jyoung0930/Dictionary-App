@@ -31,7 +31,6 @@ export default function Header({
     } else if (e.target.tagName !== "LI") {
       setDropDown(false);
     }
-    console.log(e);
   }
 
   return (

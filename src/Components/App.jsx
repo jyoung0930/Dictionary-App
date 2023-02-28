@@ -16,9 +16,14 @@ export default function App() {
   useEffect(() => {
     // fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
     //   .then((res) => (res.ok ? res.json() : console.log("error")))
-    //   .then((data) =>
-    //     data === undefined ? setError((prev) => !prev) : setData(data[0])
-    //   );
+    //   .then((data) => {
+    //     if (data === undefined) {
+    //       setError(true);
+    //     } else if (data !== undefined) {
+    //       setData(data[0]);
+    //       setError(false);
+    //     }
+    //   });
   }, [submitted]);
 
   useEffect(() => {
@@ -61,7 +66,7 @@ export default function App() {
         empty={empty}
         setIsEmpty={setIsEmpty}
       />
-      <Results audio={audioData} data={data} />
+      {!error && <Results audio={audioData} data={data} />}
     </div>
   );
 }
