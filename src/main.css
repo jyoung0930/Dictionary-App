@@ -214,17 +214,21 @@ input:focus {
   margin-bottom: 24px;
 }
 
-.noun_meaning_list {
+.meaning_list {
   font-family: "Lora", serif;
   font-size: 18px;
   margin-left: 50px;
   list-style: none;
 }
-.noun_meaning_list li {
+.meaning_list li {
   margin-bottom: 13px;
 }
 
-.noun_meaning_list li::before {
+.meaning_list:nth-of-type(1) {
+  margin-bottom: 15px;
+}
+
+.meaning_list li::before {
   content: "\2022";
   color: #a445ed;
   font-weight: bold;
@@ -279,6 +283,11 @@ input:focus {
   text-decoration: none;
   color: inherit;
   font-size: 14px;
+  word-break: break-all;
+}
+
+.source_section a:hover {
+  text-decoration: underline;
 }
 
 /* Error Section */
@@ -296,4 +305,10 @@ input:focus {
   text-align: center;
   color: #757575;
   line-height: 24px;
+}
+
+@media (max-width: 450px) {
+  .results_word {
+    font-size: 32px;
+  }
 }

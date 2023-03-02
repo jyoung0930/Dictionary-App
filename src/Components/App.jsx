@@ -75,8 +75,8 @@ export default function App() {
         setIsEmpty={setIsEmpty}
         darkMode={darkMode}
       />
-      {!error && <Results audio={audioData} data={data} />}
-      {error && <Error />}
+      {!error && <Results darkMode={darkMode} audio={audioData} data={data} />}
+      {error && <Error darkMode={darkMode} />}
     </div>
   );
 }
