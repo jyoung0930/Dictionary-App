@@ -6,6 +6,7 @@ export default function Form({
   setSubmitted,
   empty,
   setIsEmpty,
+  darkMode,
 }) {
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,10 +18,16 @@ export default function Form({
     display: empty ? "block" : "none",
   };
 
+  const inputLightStyle = {
+    color: darkMode ? "#FFFFFF" : "#2D2D2D",
+    backgroundColor: darkMode ? "#1F1F1F" : "#F4F4F4",
+  };
+
   return (
     <>
       <form onSubmit={handleSubmit}>
         <input
+          style={inputLightStyle}
           className={empty ? "error" : ""}
           type="text"
           placeholder="Search for any word..."

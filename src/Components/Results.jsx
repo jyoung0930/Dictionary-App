@@ -61,7 +61,7 @@ export default function Results({ data, audio }) {
         </div>
         <h2 className="word_type_heading">Meaning</h2>
         <ul className="noun_meaning_list">{verbMeanings}</ul>
-        <span className="word_meaning">{example}</span>
+        <div className="word_meaning">"{example}"</div>
       </div>
       <div className="footer_line"></div>
       {/* Source Section */}

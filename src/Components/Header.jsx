@@ -37,6 +37,11 @@ export default function Header({
 
   const lightStyle = {
     justifyContent: darkMode ? "flex-end" : "flex-start",
+    backgroundColor: darkMode ? "#a445ed" : "#757575",
+  };
+
+  const headerTextLightStyle = {
+    color: darkMode ? "#FFFFFF" : "#2D2D2D",
   };
 
   function handleDarkMode() {
@@ -50,7 +55,9 @@ export default function Header({
       </div>
 
       <div className="font_theme_section">
-        <span className="font_selection">{fontSelectionText}</span>
+        <span className="font_selection" style={headerTextLightStyle}>
+          {fontSelectionText}
+        </span>
         <div onClick={handleDropdown} className="arrow">
           <img src={arrow} />
         </div>
@@ -59,7 +66,7 @@ export default function Header({
           <div className="notch"></div>
         </div>
         <div className="moon">
-          <img src={moonDark} />
+          <img src={darkMode ? moonDark : moonLight} />
         </div>
         {dropDown && (
           <ul onClick={handleFontSelection} className="dropdown_menu">

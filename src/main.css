@@ -9,7 +9,7 @@ body {
   color: white;
 }
 
-#root {
+html {
   transition: all 0.5s ease-in;
 }
 
@@ -18,8 +18,8 @@ body {
 #main_container {
   margin: 0 auto;
   max-width: 737px;
-  border: 2px solid red;
   font-family: "Inter", sans-serif;
+  padding: 24px;
 }
 
 /* Header Section */
@@ -28,7 +28,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 5px solid blue;
   position: relative;
 }
 
@@ -96,7 +95,6 @@ header {
 .toggle {
   width: 40px;
   height: 20px;
-  background: #a445ed;
   border-radius: 10px;
   display: flex;
   align-items: center;
