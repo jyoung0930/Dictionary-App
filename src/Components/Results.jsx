@@ -55,7 +55,7 @@ export default function Results({ data, audio, darkMode }) {
       </div>
       {/* Noun Section */}
       <div className="noun_section">
-        <div className="word_type">
+        <div style={lightStyle} className="word_type">
           <p>Noun</p>
           <div className="word_type_line"></div>
         </div>
@@ -70,7 +70,7 @@ export default function Results({ data, audio, darkMode }) {
       </div>
       {/* Verb Section */}
       <div className="verb_section">
-        <div className="word_type">
+        <div style={lightStyle} className="word_type">
           <p>Verb</p>
           <div className="word_type_line"></div>
         </div>
