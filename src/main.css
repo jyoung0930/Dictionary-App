@@ -93,9 +93,9 @@ header {
 }
 
 .toggle {
-  width: 40px;
-  height: 20px;
-  border-radius: 10px;
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 0.625rem;
   display: flex;
   align-items: center;
   padding: 3px;
