@@ -1,7 +1,9 @@
 import { nanoid } from "nanoid";
+import { useThemeContext } from "../Context/ThemeContext";
 import playIcon from "../assets/images/icon-play.svg";
 
-export default function Results({ data, audio, darkMode }) {
+export default function Results({ data, audio }) {
+  const { darkMode } = useThemeContext();
   const handleAudio = () => {
     const sound = new Audio(audio());
     sound.play();

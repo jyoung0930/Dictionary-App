@@ -4,6 +4,8 @@ import Form from "./Form";
 import Results from "./Results";
 import deFaultdata from "../data/data";
 import Error from "./Error";
+import { useThemeContext } from "../Context/ThemeContext";
+
 export default function App() {
   const [data, setData] = useState(deFaultdata);
   const [inputValue, setInputValue] = useState("keyboard");
@@ -13,7 +15,7 @@ export default function App() {
   const [dropDown, setDropDown] = useState(false);
   const [fontSelectionText, setFontSelectionText] = useState("Sans Serif");
   const [fontSelection, setFontSelection] = useState("sans-serif");
-  const [darkMode, setDarkMode] = useState(true);
+  const { darkMode } = useThemeContext();
 
   useEffect(() => {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
@@ -64,8 +66,6 @@ export default function App() {
         setFontSelection={setFontSelection}
         fontSelectionText={fontSelectionText}
         setFontSelectionText={setFontSelectionText}
-        setDarkMode={setDarkMode}
-        darkMode={darkMode}
       />
       <Form
         setInputValue={setInputValue}
@@ -73,10 +73,9 @@ export default function App() {
         setSubmitted={setSubmitted}
         empty={empty}
         setIsEmpty={setIsEmpty}
-        darkMode={darkMode}
       />
-      {!error && <Results darkMode={darkMode} audio={audioData} data={data} />}
-      {error && <Error darkMode={darkMode} />}
+      {!error && <Results audio={audioData} data={data} />}
+      {error && <Error />}
     </div>
   );
 }

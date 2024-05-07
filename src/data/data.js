@@ -1,4 +1,4 @@
-const deFaultdata = {
+const defaultData = {
   word: "keyboard",
   meanings: [
     {
@@ -39,4 +39,4 @@ const deFaultdata = {
   sourceUrls: ["https://en.wiktionary.org/wiki/keyboard"],
 };
 
-export default deFaultdata;
+export default defaultData;

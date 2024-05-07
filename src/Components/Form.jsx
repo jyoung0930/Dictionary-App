@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { useThemeContext } from "../Context/ThemeContext";
 import searchIcon from "../assets/images/icon-search.svg";
 
 export default function Form({
@@ -6,8 +8,9 @@ export default function Form({
   setSubmitted,
   empty,
   setIsEmpty,
-  darkMode,
 }) {
+  const { darkMode } = useThemeContext();
+
   function handleSubmit(e) {
     e.preventDefault();
     setSubmitted((prev) => !prev);
