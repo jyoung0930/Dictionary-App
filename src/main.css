@@ -258,6 +258,7 @@ input:focus {
 }
 
 /* Source Section */
+
 .footer_line {
   width: 100%;
   border-top: 2px solid #3a3a3a;
@@ -293,7 +294,7 @@ input:focus {
 /* Error Section */
 
 .error_section {
-  height: 175px;
+  height: 10.9rem;
   display: flex;
   flex-direction: column;
   align-items: center;

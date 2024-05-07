@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { useThemeContext } from "../Context/ThemeContext";
 import sadFace from "../assets/images/sadface.png";
 
-export default function Error({ darkMode }) {
+export default function Error() {
+  const { darkMode } = useContext(useThemeContext);
+
   const lightStyle = {
     color: darkMode ? "#FFFFFF" : "#2D2D2D",
   };

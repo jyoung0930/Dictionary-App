@@ -2,7 +2,7 @@ import logo from "../assets/images/logo.svg";
 import arrow from "../assets/images/icon-arrow-down.svg";
 import moonLight from "../assets/images/icon-moon-light.svg";
 import moonDark from "../assets/images/icon-moon-dark.svg";
-
+import { useThemeContext } from "../Context/ThemeContext";
 export default function Header({
   dropDown,
   setDropDown,
@@ -10,9 +10,9 @@ export default function Header({
   setFontSelection,
   fontSelectionText,
   setFontSelectionText,
-  setDarkMode,
-  darkMode,
 }) {
+  const { darkMode, changeTheme } = useThemeContext();
+
   function handleDropdown() {
     setDropDown((prev) => !prev);
   }
@@ -44,10 +44,6 @@ export default function Header({
     color: darkMode ? "#FFFFFF" : "#2D2D2D",
   };
 
-  function handleDarkMode() {
-    setDarkMode((prev) => !prev);
-  }
-
   return (
     <header>
       <div className="logo">
@@ -62,7 +58,7 @@ export default function Header({
           <img src={arrow} />
         </div>
         <div className="rectangle_shape"></div>
-        <div onClick={handleDarkMode} style={lightStyle} className="toggle">
+        <div onClick={changeTheme} style={lightStyle} className="toggle">
           <div className="notch"></div>
         </div>
         <div className="moon">
